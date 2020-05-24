@@ -1,0 +1,243 @@
+:root {
+    --form-height: 70px;
+}
+
+body {
+
+    font-family: Helvetica, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #334
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    border: none;
+    border-spacing: 0;
+
+}
+
+pre {
+    margin: 0;
+}
+
+
+
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
+#viewer {
+    position: absolute;
+    top: 0;
+    left: 40vw;
+    width: 60vw;
+    height: 100vh;
+    background-color: #CCC;
+
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - var(--form-height));
+    left: 0;
+    top: 0;
+    overflow: auto;
+}
+
+
+
+#editor-container {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    width: 40vw;
+
+}
+
+#exemple-selector {
+    display: block;
+    height: 30px;
+    width: 40vw;
+}
+
+#editor {
+    margin-top: 1px;
+    height: calc(100vh - 155px - 1px);
+}
+
+#console {
+    width: 40vw;
+    height: 125px;
+    box-sizing: border-box;
+    border-top: solid 1px #CCC;
+    background-color: #000;
+}
+/*===================================================================*/
+/*===================================================================*/
+
+table.variable-descriptor {
+    width: 100%;
+    background-color: #FFF;
+    margin-bottom: 8px;
+}
+
+table.variable-descriptor > tr  td{
+    background-color: #FFF;
+}
+
+
+table.variable-descriptor tr > th {
+    white-space: nowrap;
+    padding:0;
+    vertical-align: top;
+}
+
+table.variable-descriptor h2 {
+    color: #CC6666;
+    background-color: #1D1F21;
+    padding: 4px 8px;
+    font-size: 18px;
+    margin-bottom:0;
+}
+
+
+
+
+table.variable-descriptor table.variable-metadata {
+    width: 100%;
+}
+
+
+table.variable-descriptor table.variable-metadata th {
+    padding: 2px 4px;
+    background-color:#1D1F21;
+    color: #CCC;
+}
+
+
+table.variable-descriptor table.variable-metadata td {
+    padding: 2px 4px;
+    color: #555;
+    font-style: italic;
+    border-bottom: solid 1px #CCC;
+    border-right: solid 1px #CCC;
+}
+
+table.variable-descriptor table.variable-metadata tr:last-child td {
+    border-bottom: none;
+}
+
+table.variable-descriptor table.variable-metadata tr:last-child {
+    border-bottom: solid 1px #CCC;
+}
+/*===================================================================*/
+table.variable-descriptor table.variable-type__object tr {
+    border-bottom: solid 1px #CCC;
+}
+
+
+/*===================================================================*/
+/*===================================================================*/
+
+table.variable-type__array {
+    table-layout:fixed;
+    width: 100%;
+    height: 100%;
+}
+
+table.variable-type__array thead tr th {
+    padding: 2px 4px;
+}
+
+table.variable-type__array tr th {
+    background-color:#1D1F21;
+    color: #CCC;
+
+}
+table.variable-type__array tr th.index:before {
+    content: '🔑';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+table.variable-type__array tr td {
+
+}
+
+
+/*===================================================================*/
+/*===================================================================*/
+
+
+table.variable-type__object {
+    width: 100%;
+    height: 100%;
+}
+
+table.variable-type__object tr > th {
+    background-color:#1D1F21;
+    color: #CCC;
+}
+
+table.variable-type__object tr.property-private > th {
+    background-color:#A00;
+    color: #FFF;
+}
+
+table.variable-type__object tr.property-private > th:before {
+    content: '⛔️';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+
+
+table.variable-type__object tr.property-protected > th {
+    background-color:#DA0;
+    color: #FFF;
+}
+
+table.variable-type__object tr.property-protected > th:before {
+    content: '🔒';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+
+
+table.variable-type__object tr.property-public  > th {
+    background-color:#0A8;
+    color: #FFF;
+}
+table.variable-type__object tr.property-public > th:before {
+    content: '✔️';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+
+table.variable-type__object tr td {
+
+}
+
+
+
+
+/*===================================================================*/
+/*===================================================================*/
+
+#console .message {
+    font-family: 'Courier New', Courier, monospace;
+    color: #CCC;
+    padding-left: 8px;
+    border-bottom: solid 1px  rgba(255,255,255, 0.2);
+}
+
+#console .message.error  {
+    color: #C00;
+}

@@ -1,0 +1,104 @@
+:root {
+    --main-menu-height: 25px;
+    --footer-height:15px;
+    --panel-border-color: #555;
+    --console-height: 100px;
+
+    --left-panel-width: 300px;
+}
+
+body {
+    margin:0;
+    overflow:hidden;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+
+
+main.editor .panel {
+    /*outline: solid 1px #AAA;*/
+    position: relative;
+}
+
+
+
+
+main.editor {
+    width:100vw;
+    height: 100vh;
+    background-color:#CCC;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main.editor .menu-main {
+    background-color:#323233;
+    height: var(--main-menu-height);
+    line-height: var(--main-menu-height);
+}
+
+
+main.editor .workspace {
+    flex-grow:1;
+    flex-shrink:1;
+    /*height: calc(100vh - var(--footer-height) - var(--footer-height));*/
+    display: flex;
+}
+
+main.editor .workspace .panel-left {
+    width: var(--left-panel-width);
+    background-color:#252526;
+
+
+    border-right: solid 1px var(--panel-border-color);
+}
+
+main.editor .workspace .panel-right {
+    flex-grow: 1;
+    background-color:#252526;
+}
+
+
+
+main.editor .workspace .panel-center {
+    position : relative;
+    width: calc(100vw - var(--left-panel-width));
+    height:100%;
+
+    display:flex;
+    flex-direction: column;
+}
+
+
+main.editor .workspace .panel-center .panel-main {
+    height: calc(100% - var(--console-height));
+
+    position : relative;
+    
+}
+
+main.editor .workspace .panel-center .console {
+    min-height: 0;
+    border-top: solid 1px var(--panel-border-color);
+    background-color:#1E1E1E;
+    overflow: auto;
+}
+
+
+
+main.editor .workspace .panel-center .panel-main .editor {
+    height:100%;   
+}
+
+
+
+
+main.editor .footer {
+    height: var(--footer-height);
+    line-height: var(--footer-height);
+    background-color:#F0F;
+}

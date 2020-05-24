@@ -1,0 +1,13 @@
+/*===================================================================*/
+/*===================================================================*/
+
+#console .message {
+    font-family: 'Courier New', Courier, monospace;
+    color: #CCC;
+    padding-left: 8px;
+    border-bottom: solid 1px  rgba(255,255,255, 0.2);
+}
+
+#console .message.error  {
+    color: #C00;
+}

@@ -1,0 +1,146 @@
+
+table.variable-descriptor {
+    width: 100%;
+    background-color: #FFF;
+    margin-bottom: 8px;
+}
+
+table.variable-descriptor > tr  td{
+    background-color: #FFF;
+}
+
+
+table.variable-descriptor tr > th {
+    white-space: nowrap;
+    padding:0;
+    vertical-align: top;
+}
+
+table.variable-descriptor h2 {
+    color: #CC6666;
+    background-color: #1D1F21;
+    padding: 4px 8px;
+    font-size: 18px;
+    margin-bottom:0;
+}
+
+
+
+
+table.variable-descriptor table.variable-metadata {
+    width: 100%;
+}
+
+
+table.variable-descriptor table.variable-metadata th {
+    padding: 2px 4px;
+    background-color:#1D1F21;
+    color: #CCC;
+}
+
+
+table.variable-descriptor table.variable-metadata td {
+    padding: 2px 4px;
+    color: #555;
+    font-style: italic;
+    border-bottom: solid 1px #CCC;
+    border-right: solid 1px #CCC;
+}
+
+table.variable-descriptor table.variable-metadata tr:last-child td {
+    border-bottom: none;
+}
+
+table.variable-descriptor table.variable-metadata tr:last-child {
+    border-bottom: solid 1px #CCC;
+}
+/*===================================================================*/
+table.variable-descriptor table.variable-type__object tr {
+    border-bottom: solid 1px #CCC;
+}
+
+
+/*===================================================================*/
+/*===================================================================*/
+
+table.variable-type__array {
+    table-layout:fixed;
+    width: 100%;
+    height: 100%;
+}
+
+table.variable-type__array thead tr th {
+    padding: 2px 4px;
+}
+
+table.variable-type__array tr th {
+    background-color:#1D1F21;
+    color: #CCC;
+
+}
+table.variable-type__array tr th.index:before {
+    content: '🔑';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+table.variable-type__array tr td {
+
+}
+
+
+/*===================================================================*/
+/*===================================================================*/
+
+
+table.variable-type__object {
+    width: 100%;
+    height: 100%;
+}
+
+table.variable-type__object tr > th {
+    background-color:#1D1F21;
+    color: #CCC;
+}
+
+table.variable-type__object tr.property-private > th {
+    background-color:#A00;
+    color: #FFF;
+}
+
+table.variable-type__object tr.property-private > th:before {
+    content: '⛔️';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+
+
+table.variable-type__object tr.property-protected > th {
+    background-color:#DA0;
+    color: #FFF;
+}
+
+table.variable-type__object tr.property-protected > th:before {
+    content: '🔒';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+
+
+table.variable-type__object tr.property-public  > th {
+    background-color:#0A8;
+    color: #FFF;
+}
+table.variable-type__object tr.property-public > th:before {
+    content: '✔️';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+
+table.variable-type__object tr td {
+
+}
+
