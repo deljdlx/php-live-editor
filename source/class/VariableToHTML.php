@@ -55,11 +55,13 @@ class VariableToHTML
         $html = '<table class="variable-descriptor ' . gettype($this->value) .'">';
             $html .= '<col width="150px">';
             $html .= '<col width="auto">';
-            $html .= '<thead><tr><th colspan="2"><h2 class="variable-name">$' . $this->name . '</h2></th></thead>';
+            $html .= '<thead><tr><th colspan="2"><h2 class="variable-name">(' . $this->getType() . ') $' . $this->name . '</h2></th></thead>';
             $html .= '<tr>';
+                /*
                 $html .= '<th>';
                     $html .= $this->getGetMetadata();
                 $html .= '</th>';
+                */
                 $html .= '<td class="value">' . $representation . '</td>';
             $html .= '</tr>';
         $html .= '</table>';
