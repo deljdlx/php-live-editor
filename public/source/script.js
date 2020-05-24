@@ -46,6 +46,12 @@ $(".editor .workspace .panel-center .panel-main").resizable({
 
 });
 
+
+$( function() {
+    $( "#tabs" ).tabs();
+  } );
+
+
 //editor.resize();
 
 
